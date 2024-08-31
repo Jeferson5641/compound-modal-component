@@ -1,0 +1,34 @@
+@keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .modal-enter {
+    animation: slideDown 0.5s forwards;
+  }
+  
+  .modal-exit {
+    animation: slideDown 0.5s reverse forwards;
+  }
+  
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.1); /* Ajuste a opacidade conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
